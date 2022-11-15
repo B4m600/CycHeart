@@ -1,0 +1,54 @@
+<head>
+<title>B4m600-HeartEddy</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="author" content="B4m600-南竺_QQ2656980584" />
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<style>
+	    
+        ul {
+			
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        li {
+			text-align:center;
+			color:red;font-size:30px;
+			text-shadow:0 0 1px white;
+            position: absolute;
+            width: 100px;
+            height: 100px;line-height:100px;
+            filter: hue-rotate(calc(100deg * var(--i)));
+            transform-style: preserve-3d;  
+            animation: move 90s linear infinite; 
+            animation-delay: calc(-1s * var(--i));
+        }
+
+        @keyframes  move {
+            0%{
+                transform:perspective(1000px) rotate(0) translateZ(0px);
+				color:transparent;
+			}
+			80%{color:transparent;}
+            100%{
+                transform:perspective(1000px) translateZ(1100px) scale(0.8,0.6);
+				color:red;
+				}
+        }
+    </style>
+
+<body style="display:flex;align-items:center;justify-content:center;background:linear-gradient(45deg,tomato,cornflowerblue);background-attachment:fixed">
+    <ul style="list-style:none;position:relative;">
+       <li style="--i:1"></li>
+    </ul>
+</body>
+<script>
+const UL=document.querySelector("ul")
+for(var i=1;i<=80;i++){
+UL.innerHTML+=`<li style="--i:${i}">&#9825</li>`}
+temp=document.querySelectorAll("li");
+</script>
+</html>
+
